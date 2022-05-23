@@ -1,0 +1,30 @@
+{
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "defaultCommandTimeout": 8000,
+  "pageLoadTimeout": 80000,
+  "viewportHeight": 660,
+  "viewportWidth": 1000,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "charts": true,
+    "html": true,
+    "json": true,
+    "reportDir": "cypress/mochawesome-report",
+    "reportFilename": "mochawesome",
+    "overwrite": false,
+    "timestamp":"mmddyyy_HHMMss"
+
+  },
+
+  "testFiles": ["**/*.feature","**/*.js"],
+
+  "retries": {
+   
+    "runMode": 1
+  },
+
+  "env": {
+    "url": "https://rahulshettyacademy.com"
+  },
+  "projectId": "kqkqgv"
+}

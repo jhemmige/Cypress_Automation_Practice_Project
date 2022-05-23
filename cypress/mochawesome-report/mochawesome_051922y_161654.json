@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-19T10:46:39.329Z",
+    "end": "2022-05-19T10:46:54.244Z",
+    "duration": 14915,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "64acf6bb-20bf-4ed8-8c8c-2a24e1b8e23f",
+      "title": "",
+      "fullFile": "cypress/integration/3-examples/form_submission.js",
+      "file": "cypress/integration/3-examples/form_submission.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "90c7b143-a823-4dfc-b0a1-ecb3bdc6aa82",
+          "title": "form_submission_suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "first_method",
+              "fullTitle": "form_submission_suite first_method",
+              "timedOut": null,
+              "duration": 10199,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var hp = new _HomePage[\"default\"]();\nvar prodp = new _ProductPage[\"default\"](); //cy.visit(\"https://rahulshettyacademy.com/angularpractice/\")\ncy.visit(Cypress.env(\"url\") + \"/angularpractice\");\nhp.getNameInputField().type(this.data.name);\nhp.getEmailInputField().clear().type(this.data.email);\nhp.getGender().select(this.data.gender);\nhp.getBday().type(this.data.dob);\ncy.get(\"input[type='submit']\").click(); // cy.get(\"div[class='alert alert-success alert-dismissible']\").should(\"contain.text\",\" The Form has been submitted successfully!.\")\ncy.get(\"div[class='alert alert-success alert-dismissible']\").should(\"include.text\", \" The Form has been submitted successfully!.\");",
+              "err": {},
+              "uuid": "8442c60c-f507-4e86-affb-e5a12a84d836",
+              "parentUUID": "90c7b143-a823-4dfc-b0a1-ecb3bdc6aa82",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8442c60c-f507-4e86-affb-e5a12a84d836"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10199,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/mochawesome-report",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "timestamp": "mmddyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

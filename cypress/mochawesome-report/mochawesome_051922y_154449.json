@@ -1,0 +1,128 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2022-05-19T10:13:53.053Z",
+    "end": "2022-05-19T10:14:49.411Z",
+    "duration": 56358,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "eebb5820-7990-4087-9656-10056ca8692e",
+      "title": "",
+      "fullFile": "cypress/integration/3-examples/BDD_framework/Ecommerce.feature",
+      "file": "cypress/integration/3-examples/BDD_framework/Ecommerce.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ad0cc453-3d60-4a06-b8c1-6219c9b542e2",
+          "title": "End to End Ecommerce Validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ecommerce Product Delivery",
+              "fullTitle": "End to End Ecommerce Validation Ecommerce Product Delivery",
+              "timedOut": null,
+              "duration": 48012,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "90238e31-5139-4f88-a17e-8fe56ceafe99",
+              "parentUUID": "ad0cc453-3d60-4a06-b8c1-6219c9b542e2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Form submission happens successfully",
+              "fullTitle": "End to End Ecommerce Validation Form submission happens successfully",
+              "timedOut": null,
+              "duration": 223,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {},
+              "uuid": "0a2e786c-5c49-4dbb-b347-962d1af87817",
+              "parentUUID": "ad0cc453-3d60-4a06-b8c1-6219c9b542e2",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "90238e31-5139-4f88-a17e-8fe56ceafe99"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "0a2e786c-5c49-4dbb-b347-962d1af87817"
+          ],
+          "duration": 48235,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/mochawesome-report",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "timestamp": "mmddyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

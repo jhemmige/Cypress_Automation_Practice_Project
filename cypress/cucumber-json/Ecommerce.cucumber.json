@@ -1,0 +1,152 @@
+[
+  {
+    "description": "    We are validating the End to End scenarios",
+    "keyword": "Feature",
+    "name": "End to End Ecommerce Validation",
+    "line": 1,
+    "id": "end-to-end-ecommerce-validation",
+    "tags": [],
+    "uri": "Ecommerce.feature",
+    "elements": [
+      {
+        "id": "end-to-end-ecommerce-validation;ecommerce-product-delivery",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Ecommerce Product Delivery",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open the Ecommerce Page",
+            "result": {
+              "status": "passed",
+              "duration": 1266000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I add the items to cart",
+            "result": {
+              "status": "passed",
+              "duration": 2640000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "validate the total price displayed",
+            "result": {
+              "status": "passed",
+              "duration": 475000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "select the country submit and Verify Thankyou message",
+            "result": {
+              "status": "passed",
+              "duration": 6119000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "end-to-end-ecommerce-validation;form-submission-happens-successfully",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Form submission happens successfully",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 11
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I open EcommercePage containing the form",
+            "result": {
+              "status": "passed",
+              "duration": 480000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "email",
+                      "gender",
+                      "dob"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "jaaz",
+                      "cy@hello.com",
+                      "Male",
+                      "1999-12-02"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "jhumma",
+                      "cya@hellooo.com",
+                      "Male",
+                      "2000-12-02"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I fill up all the input fields with valid inputs",
+            "result": {
+              "status": "passed",
+              "duration": 2948000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I want to ensure form is validated",
+            "result": {
+              "status": "passed",
+              "duration": 83000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "user clicks on shop link successfully",
+            "result": {
+              "status": "passed",
+              "duration": 639000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

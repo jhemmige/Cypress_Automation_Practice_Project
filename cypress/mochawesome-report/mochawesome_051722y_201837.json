@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-17T14:48:31.128Z",
+    "end": "2022-05-17T14:48:37.931Z",
+    "duration": 6803,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5fe38b9b-df39-46a5-b9e1-b224bfef2a83",
+      "title": "",
+      "fullFile": "cypress/integration/AngularPracticeTest/calculation_in_cart.js",
+      "file": "cypress/integration/AngularPracticeTest/calculation_in_cart.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "867f9b08-caa5-4414-8e59-e04b36044612",
+          "title": "calculation_suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "first_method",
+              "fullTitle": "calculation_suite first_method",
+              "timedOut": null,
+              "duration": 4784,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var hp = new _HomePage[\"default\"]();\nvar prodp = new _ProductPage[\"default\"]();\nvar checkoutPg = new _CheckoutPage[\"default\"]();\nvar purchPg = new _purchasePage[\"default\"](); // cy.visit(\"https://rahulshettyacademy.com/angularpractice/\") check TestAutomation_1.js\ncy.visit(Cypress.env(\"url\") + \"/angularpractice/\");\nhp.getNameInputField().type(this.data.name);\nhp.getEmailInputField().clear().type(this.data.email);\nhp.getGender().select(this.data.gender);\nhp.getBday().type(this.data.dob);\nhp.getShopBtn().click(); //this is how you iterate through array\nthis.data.prodName.forEach(function (element) {\n  return cy.SelectProduct(element);\n});\nprodp.getcheckout().click();\n/*cy.get(\"tr td:nth-child(4) >strong\").then(function(element){\n   const pricetxt=  element.text()\n  cy.log(pricetxt)\n  })*/\n//this testcase we are calculating the the sum of the amt ( programmatically) in the cart page \n//which is equal to the actual sum\nvar sum = 0; // we are using variable here since it needs to be reassigned\ncy.get(\"tr td:nth-child(4) >strong\").each(function (el, index, list) {\n  var pricetxt = el.text();\n  var pricetxt1 = pricetxt.split(\".\"); // splits the data using a regex\n  //pricetxt.trim\n  var pricetxt2 = pricetxt1[1].trim(); // trims any leading/trailing spaces\n  cy.log(pricetxt2);\n  sum = Number(sum) + Number(pricetxt2); // by default any data in js is a string. Hence to make it a number, we use number method and pass the string into it\n  //this is resolving the promise since cypress doesnot have knowledge of adding sequentially.\n}).then(function () {\n  cy.log(Number(sum));\n});\ncy.get(\"h3 strong\").then(function (element) {\n  var Total = element.text().split(\".\");\n  Total = Total[1].trim();\n  var newTotal = Number(Total);\n  cy.log(newTotal); //chai assertion\n  expect(Number(sum)).to.equal(newTotal);\n});",
+              "err": {},
+              "uuid": "2d021a06-a815-46e3-b3d2-f3bc99bbaf93",
+              "parentUUID": "867f9b08-caa5-4414-8e59-e04b36044612",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2d021a06-a815-46e3-b3d2-f3bc99bbaf93"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4784,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/mochawesome-report",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "timestamp": "mmddyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

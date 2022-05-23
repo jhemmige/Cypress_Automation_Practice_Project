@@ -1,0 +1,9 @@
+{
+  "name": "Jaasy",
+  "email": "hello@cypress.io",
+  "gender": "Female",
+  "dob":"1949-12-02",
+  "prodName":["Nokia Edge","Blackberry","Samsung Note 8"],
+  "country": "India",
+  "country1": "United"
+}

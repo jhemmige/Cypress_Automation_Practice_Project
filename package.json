@@ -1,0 +1,41 @@
+{
+  "name": "testautomation_framework_may3_2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cypress run",
+    "headedTest": "./node_modules/.bin/cypress run --headed",
+    "headedSpec": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --headed --browser chrome",
+    "recordDashboardTest": "npm run test -- --record --key 4338747d-c775-4e8b-a410-986750e8b000",
+    "recordMochawesomeTest": " npm run test -- --headed --browser chrome --reporter mochawesome",
+    "specificTestHeadless": "npm run test -- --browser chrome --reporter mochawesome --spec /Users/jayashreehemmige/TestAutomation_Framework_May3_2022/cypress/integration/AngularPracticeTest/calculation_in_cart.js",
+    "specificTestHeaded": "npm run test -- --headed --browser chrome --reporter mochawesome --spec /Users/jayashreehemmige/TestAutomation_Framework_May3_2022/cypress/integration/3-examples/calculation_in_cart.js",
+    "specificTestHeadlessAngular": "npm run test -- --browser chrome --reporter mochawesome --spec \"cypress/integration/AngularPracticeTest/*\"",
+    "specificTestRecordHeadlessAngular": "npm run test -- --browser chrome --record --key 4338747d-c775-4e8b-a410-986750e8b000 --reporter mochawesome --spec \"cypress/integration/AngularPracticeTest/*\""
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "author": "Jayashree Hemmige",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.6.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^1.20.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^9.2.1",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-report-generator": "^6.2.0"
+  
+  }
+}

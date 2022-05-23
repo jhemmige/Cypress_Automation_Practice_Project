@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-19T10:47:11.668Z",
+    "end": "2022-05-19T10:48:04.066Z",
+    "duration": 52398,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "85205cdd-3194-459b-a319-ecbced48c970",
+      "title": "",
+      "fullFile": "cypress/integration/3-examples/TestAutomation_1.js",
+      "file": "cypress/integration/3-examples/TestAutomation_1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "af0b85c0-1d2f-40c1-a35f-c1323907ce9e",
+          "title": "first_automation_suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "first_method",
+              "fullTitle": "first_automation_suite first_method",
+              "timedOut": null,
+              "duration": 48414,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var hp = new _HomePage[\"default\"]();\nvar prodp = new _ProductPage[\"default\"]();\n/*this is how it was initially\n    cy.visit(\"https://rahulshettyacademy.com/angularpractice/\")*/\n//after centralizing and optimizing the code, it appars this way\ncy.visit(Cypress.env(\"url\") + \"/angularpractice/\");\nhp.getNameInputField().type(this.data.name);\nhp.getEmailInputField().clear().type(this.data.email);\nhp.getGender().select(this.data.gender); //TC 1:In this testcase we are comparing to check the names in the input box\n//Method 1\nhp.get2wayBinding().should(\"have.value\", this.data.name); //Method 2\n/*cy.get(\"input[name='name']:nth-child(1)\").each(($el,index,$list)=>{\n   const inputtxt= $el.text()\n \n cy.log(\"this is the \" + $el.text())\n  if(inputtxt.includes(this.data.name)){\n  cy.log(\"this is the right name\")\n  }\n  })*/\n// TC 2:Here were are checking if the minimum length of the field is 2. there are 2 ways to do this. 1. Is a straightforward shortcut way using Jquery.\n// the other one is the long way which is commented out.\ncy.get(\":nth-child(1) > .form-control\").should(\"have.attr\", \"minlength\", \"2\");\n/*  cy.get(\":nth-child(1) > .form-control\").then(function(e1){\n  const len=   e1.prop(\"minlength\")\n       console.log(len)\n    })*/\n// TC 3: in this testcase we are trying to find in Enterpreuneuship is disabled\nhp.getEntrepreneurradioBtn().should(\"be.disabled\"); //TC 4:clicking on SHOP link to go a different page.\n//cy.pause()\nhp.getShopBtn().click(); //cy.SelectProduct(\"Samsung Note 8\")\n//cy.SelectProduct(\"Blackberry\")\n//cy.SelectProduct(\"Nokia Edge\")\nprodp.getlistGroupitems();\ncy.get(\".list-group-item\").should(\"have.length\", 3);\nthis.data.prodName.forEach(function (element) {\n  return cy.SelectProduct(element);\n});\nprodp.getcheckout().click();",
+              "err": {},
+              "uuid": "3bc5b877-bf88-45e4-b641-6146d5256a0c",
+              "parentUUID": "af0b85c0-1d2f-40c1-a35f-c1323907ce9e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3bc5b877-bf88-45e4-b641-6146d5256a0c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 48414,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/mochawesome-report",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "timestamp": "mmddyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

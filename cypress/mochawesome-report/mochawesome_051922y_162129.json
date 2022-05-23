@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-19T10:50:36.476Z",
+    "end": "2022-05-19T10:51:29.439Z",
+    "duration": 52963,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "46abf56d-ba76-4631-a362-5234b168d870",
+      "title": "",
+      "fullFile": "cypress/integration/AngularPracticeTest/End_to_End.js",
+      "file": "cypress/integration/AngularPracticeTest/End_to_End.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6f0c39c3-549e-4604-ab04-b22a3354d9df",
+          "title": "End_to_End_Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "first_method",
+              "fullTitle": "End_to_End_Suite first_method",
+              "timedOut": null,
+              "duration": 50553,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var hp = new _HomePage[\"default\"]();\nvar prodp = new _ProductPage[\"default\"]();\nvar checkoutPg = new _CheckoutPage[\"default\"]();\nvar purchPg = new _purchasePage[\"default\"](); ///angularpractice/\ncy.visit(\"https://rahulshettyacademy.com/angularpractice/\");\nhp.getNameInputField().type(this.data.name);\nhp.getEmailInputField().clear().type(this.data.email);\nhp.getGender().select(this.data.gender);\nhp.getBday().type(this.data.dob);\nhp.getShopBtn().click();\ncy.get(\":nth-child(1) > .card > .card-footer > .btn > .zmdi\").click();\ncy.get(':nth-child(2) > .card > .card-footer > .btn').click();\nprodp.getcheckout().click();\ncy.contains(\"Checkout\").click();\ncheckoutPg.getbtnCheckout().click();\npurchPg.getCountryInput(this.data.country1); //cy.waitFor(8000)\n//Cypress.config(\"defaultCommandTimeout\",8000)\npurchPg.getCountrylist();\npurchPg.getCheckBox();\npurchPg.getSubmitBtn(); //this script is written to get the text. Since text is not a native cypress command, we have to resolve the promise and get the text of the element\ncy.get(\"div[class='alert alert-success alert-dismissible']\").then(function (element) {\n  var eltxt = element.text();\n  cy.log(eltxt); //chai assertion\n  expect(eltxt.includes(\"Thank you!\")).to.be[\"true\"];\n});\ncy.get(\"div[class='alert alert-success alert-dismissible']\").should(\"contain.text\", \" Thank you! Your order will be delivered in next few weeks :-).\");",
+              "err": {},
+              "uuid": "3b76a5f6-31ca-4585-b083-d012cca335f8",
+              "parentUUID": "6f0c39c3-549e-4604-ab04-b22a3354d9df",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3b76a5f6-31ca-4585-b083-d012cca335f8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 50553,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/mochawesome-report",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "timestamp": "mmddyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
