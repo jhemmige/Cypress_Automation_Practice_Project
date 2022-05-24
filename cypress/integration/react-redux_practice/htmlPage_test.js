@@ -1,3 +1,5 @@
+/// <reference types="Cypress-iframe" />
+import "cypress-iframe"
 describe("html_first_suite", function(){
 
 
@@ -23,7 +25,7 @@ cy.get("fieldset#GETCOMMAND").within((fieldset)=>{
     })
 
 
-    it.only("hidden_shadow_dom_elements", ()=>{
+    it("hidden_shadow_dom_elements", ()=>{
 
 
         cy.visit("https://qaboxletstestcypresspracticesite.netlify.app/shadowdom")
@@ -52,5 +54,37 @@ cy.get("fieldset#GETCOMMAND").within((fieldset)=>{
 
     })
  
+    it("handlin_iframes", function (){
+
+    cy.visit("https://the-internet.herokuapp.com/frames")
+    //cy.get("div.example>ul>li:nth-child(1)").click()
+    cy.get(":nth-child(1) > a").click()
+    
+    cy.get('frame[src="/frame_top"]').within($frame => {
+        const [frame_top] = $frame.get()
+        const text = frame_top.contentDocument.body.getElementsByTagName('frame')[1]
+            .contentDocument.body.querySelector('div#content').innerText
+        expect(text).to.be.eql('MIDDLE')
+       
+    })
+
+    it.only("handlin_iframes_another way ", function (){
+
+        cy.visit("https://the-internet.herokuapp.com/frames")
+        //cy.get("div.example>ul>li:nth-child(1)").click()
+        cy.get(":nth-child(1) > a").click()
+        
+        cy.frameLoaded('frame[src="/frame_top"]')
+        cy.iframe('frame[src="/frame_top"]').find("frame[src='/frame_middle']").should("include.text", "MIDDLE")
+        
+    
+    
+    
+        })
+
+
+
+
+})
 
 })
