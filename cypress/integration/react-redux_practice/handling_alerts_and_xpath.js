@@ -97,7 +97,16 @@ it("handle_multi_popups", function(){
 cy.visit("https://qaboxletstestcypresspracticesite.netlify.app/cyxpath.html")
 cy.xpath("//*[@id='groupone']/table/tbody/tr/td[2]").type("ABD")
 
+cy.xpath("//*[@id='grouptwo']/table/tbody/tr/td[2]").type("Trying")
+
+cy.xpath("//*[@id='grouptwo']").within(()=>{
+    //when this .is added, it is able to enter data now. Else cypress says, there are multiple elements with same xpath
+    cy.xpath(".//input[@name='Channel Name']").type("trying out")
+
+    })
+//cy.visit("https://qaboxletstestcypresspracticesite.netlify.app/visualtesting.html")
+//cy.xpath("//a[@href='index.html']").click()
     })
 
-        })
     
+})
