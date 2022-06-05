@@ -5,13 +5,13 @@ let arr= [2,3,4,6]
 
 let sum=0
 
-for( let i=0; i<arr.length;i++){
+// for( let i=0; i<arr.length;i++){
 
-sum= sum+arr[i]
+// sum= sum+arr[i]
 
 
-}
-console.log(sum)
+// }
+// console.log(sum)
 
 //above method can be also done using foreach and map methods as below
 //difference between ForEACH and MAP
@@ -20,7 +20,7 @@ console.log(sum)
 
 function add(currentval){
 
-    sum=currentval
+    sum=sum+currentval
 
 }
 arr.forEach(add)
@@ -39,7 +39,7 @@ console.log("map"+ newNum)
 
 
 arr.map(value=>{
-console.log("map"+ value)
+console.log("map"+value)
 
 })
 

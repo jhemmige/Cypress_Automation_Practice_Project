@@ -45,7 +45,7 @@ var b= function(){
 }
 b()
 
-// a function can accept another function as a parameter and invoke it 
+// a function can accept another function as a parameter and invoke it . This is call back function. 
 function outer(func){
 
 func()
