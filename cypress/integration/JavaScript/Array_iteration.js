@@ -1,4 +1,4 @@
-let a = [1,2,5,3,4,9,,6,8]
+let a = [1,2,5,3,4,9,7,6,8]
 
 //for( i in a){
 
@@ -36,13 +36,16 @@ Baseblock: "2.5GHz"
 
 }
 
-
-
-
-
 }
+
+
+
 //console.log(computer.processor.model)
 
 let c= Object.keys(computer)
+console.log(c)
 let vals= Object.values(computer)
 console.log(vals)
+
+
+

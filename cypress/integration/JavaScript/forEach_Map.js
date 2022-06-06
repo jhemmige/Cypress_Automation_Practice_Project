@@ -44,5 +44,29 @@ console.log("map"+value)
 })
 
 
+arr.reduce((sum,total)=>sum+total,0)
+
+console.log(arr.reduce((sum,total)=>sum+total,0))
+
+//helps in filtering if a number is even or odd
+let evennumberretrieved= arr.filter(evennum=>evennum%2==0)
+console.log(evennumberretrieved)
+
+//helps in mapping it to a new value
+let multipliedval= arr.map(mul=>mul*3)
+console.log(multipliedval)
+
+//helps in addition, substration etc...
+let newTotal= multipliedval.reduce((sum,gtotal)=>sum+gtotal,0)
+console.log(newTotal)
+
+let newDiff= multipliedval.reduce((diff,newval)=>diff-newval,6) // starts subtracting 6 from the first number
+console.log(newDiff)
+
+let fruits=["banana", "apple", "pomegranate", "mango", "pineapple", "grapes", "apricot"]
+fruits.sort()
+console.log(fruits)
+
+
 
 
