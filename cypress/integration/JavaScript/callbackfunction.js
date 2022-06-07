@@ -2,60 +2,113 @@
 
 
 
-
-let func= function(num1, num2, typeOfOperation){
-
-if ((typeOfOperation).toLowerCase()==="add"){
-
-return num1+num2
+//FIRST CLASS FUNCTION - ability of the function to be returned from a funtion, passed as a parameter or argument of a function 
 
 
-}
-else if ((typeOfOperation).toLowerCase()==="sub"){
+// let func= function(num1, num2, typeOfOperation){
+
+// if ((typeOfOperation).toLowerCase()==="add"){
+
+// return num1+num2
 
 
-    return num1-num2
-}
-else ((typeOfOperation).toLowerCase()==="mul")
-
-{
+// }
+// else if ((typeOfOperation).toLowerCase()==="sub"){
 
 
-    return num1*num2
-}
+//     return num1-num2
+// }
+// else ((typeOfOperation).toLowerCase()==="mul")
+
+// {
 
 
-}
-
-console.log(func(3,2,"MUL"))
-
+//     return num1*num2
+// }
 
 
+// }
 
-let add= function(num1, num2 ){
-
-return num1+num2
-
-}
+// console.log(func(3,2,"MUL"))
 
 
-let sub= function(num1, num2 ){
 
-    return num1-num2
+
+// let add= function(num1, num2 ){
+
+// return num1+num2
+
+// }
+
+
+// let sub= function(num1, num2 ){
+
+//     return num1-num2
     
-    }
+//     }
 
-    let multiply= function (num1, num2){
+//     let multiply= function (num1, num2){
 
-        return num1*num2
+//         return num1*num2
 
-    }
+//     }
 
-    let calculation=function(num1,num2, operate){
+//     let calculation=function(num1,num2, operate){
 
 
-        return operate(num1,num2)
+//         return operate(num1,num2)
 
-    }
+//     }
 
-   console.log(calculation(10,2,multiply))
+//    console.log(calculation(10,2,multiply))
+
+
+
+
+
+   // call back function
+   
+   
+ 
+  
+   function calculate(num1, num2,New){
+
+    New=()=>{console.log( (num1* num2))} 
+    New()
+       }
+
+    calculate(10, 0.5)
+  
+
+
+
+    //    function b(param1){
+
+    //     console.log(param1)
+
+    //    }
+       
+    //    function xyz(){
+
+    //     console.log("from xyz")
+
+    //    }
+
+    //   //b("this is from " + xyz())
+
+    //   b()
+   
+    
+
+   
+
+
+
+
+
+      
+    
+      
+
+       
+   

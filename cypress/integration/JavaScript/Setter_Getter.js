@@ -1,3 +1,5 @@
+//Getters and Setters helps in setting and retrieving properties
+
 class Person_new {
 
     designation="QA LEAD"
