@@ -127,4 +127,6 @@ And("user clicks on shop link successfully", function(){
 
     homepg.getShopBtn().click()
 
+   
+
 })

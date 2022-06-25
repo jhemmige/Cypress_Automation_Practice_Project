@@ -2,6 +2,7 @@
 // 5 - immediately invoked function. Function instance is created, function is executed and function is discarded
 // they are immediately available for garbage collection once executed thereby freeing up memeory
 //this function didnot seem to run along with other other functions in function concepts.js
+//anonymous function that is invoked immediately is IIFE
 
 //this ws the error it showed when run in the other file. But seems to run on its own
 /**TypeError: console.log(...) is not a function
@@ -63,6 +64,14 @@ console.log("this is function from addtion")
 })()
 
 //addition()
+
+
+;(()=>
+{
+    console.log("this is anon function")
+    
+    })()
+    
 
 
 

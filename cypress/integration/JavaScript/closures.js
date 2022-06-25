@@ -1,7 +1,7 @@
 
 //closures: when outerfunction and innerfunctions are bundled together and inner functions have access 
 //to the variables of the outerfunction.
-//definition of closure: function alogn with it lexical scope bundled together is closure.
+//definition of closure: function along with it lexical scope bundled together is closure.
 let num1= 105
 
 function addingnumber(number){
@@ -109,3 +109,10 @@ var clo= function (){
 //clo()
 let amp= clo()
 console.log(amp)
+
+
+
+
+
+
+

@@ -58,6 +58,7 @@ it ("first_method",function(){
         var sum=0 // we are using variable here since it needs to be reassigned
         cy.get("tr td:nth-child(4) >strong").each((el, index,list)=>{
 
+          
             const pricetxt= el.text()
            
 
